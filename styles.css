@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#output1 {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+    color: black;
+    font-style: normal;
+    display: none;
+    /* Initially hidden */
+}
+
+#output2 {
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    text-align: left;
+    color: black;
+    font-style: normal;
+    display: none;
+    /* Initially hidden */
+}
+
+.loader {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    animation: spin 2s linear infinite;
+    display: none;
+    /* Initially hidden */
+    margin: 20px auto;
+    /* Center the loader */
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.instructions {
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #555;
+}
+
+#imagePreview {
+    margin: 20px 0;
+}
+
+#imagePreview img {
+    max-width: 300px;
+    max-height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}

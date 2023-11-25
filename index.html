@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hub Wiki Page Creator - Flora</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <h1>Hub Wiki Page Creator - Flora</h1>
+    <h2>Optical Character Recognition (OCR) Demo</h2>
+    <!-- <div class="instructions">
+        <p>Upload the Flora DM to extract text.</p>
+    </div>
+    <div>
+        <input type="file" id="imageInput1">
+        <div id="imagePreview1"></div>
+        <button onclick="processImage(1)">Extract DM Text</button>
+        <div id="output1"></div>
+        <div id="loaderOne" class="loader"></div>
+    </div>
+    <br> -->
+    <div class="instructions">
+        <p>Upload A Flora Analysis Visor Scan Image.</p>
+        <input type="file" id="imageInput2">
+        <div id="imagePreview2"></div>
+        <p>After choosing the file, click button below to extract text.</p>
+        <button onclick="processImage(2)">Extract AV Text</button>
+        <div id="output2"></div>
+        <div id="loaderTwo" class="loader"></div>
+        <br><br>
+        <p>Verify the OCR output above is correct and press the button below to add the data to the form below</p>
+        <button onclick="addOcrTextToForm()">Verify OCR Output</button>
+    </div>
+    <h3>INPUTS:</h3>
+    <div id="input" class="column is-full-mobile">
+        <div class="table">
+            <div class="tableCell text">
+                <label>Biome:</label>
+            </div>
+            <div class="tableCell data">
+                <select name="Type" data-dest="biome" id="biome_input">
+                    <option value=""></option>
+                    <option value="Lush">Lush</option>
+                    <option value="Barren">Barren</option>
+                    <option value="Dead">Dead</option>
+                    <option value="Exotic">Exotic</option>
+                    <option value="Mega Exotic">Mega Exotic</option>
+                    <option value="Scorched">Scorched</option>
+                    <option value="Frozen">Frozen</option>
+                    <option value="Toxic">Toxic</option>
+                    <option value="Irradiated">Irradiated</option>
+                    <option value="Marsh">Marsh</option>
+                    <option value="Volcanic">Volcanic</option>
+                </select>
+            </div>
+            <div class="tableCell text">
+                <label>Age:</label>
+            </div>
+            <div class="tableCell data">
+                <input type="text" list="ageData" data-dest="age" name="Age" id="age_input">
+            </div>
+            <div class="tableCell text">
+                <label>Root structure:</label>
+            </div>
+            <div class="tableCell data">
+                <input type="text" list="rootData" data-dest="roots" name="Roots" id="roots_input">
+            </div>
+            <div class="tableCell text">
+                <label>Nutrient Source:</label>
+            </div>
+            <div class="tableCell data">
+                <input type="text" list="nutSourceData" data-dest="nut_source" name="Nut_Source" id="nut_source_input">
+            </div>
+            <div class="tableCell text">
+                <label for="notesInput">Notes:</label>
+            </div>
+            <div class="tableCell data">
+                <input data-dest="notes" type="text" list="floraNotesData" id="notesInput">
+            </div>
+            <div class="tableCell text">
+                <label>Primary Element:</label>
+            </div>
+            <div class="tableCell data">
+                <input type="text" list="floraResources" data-dest="element_primary" 
+                    name="Element_Primary" id="element_primary_input">
+            </div>
+            <div class="tableCell text">
+                <label>Secondary Element:</label>
+            </div>
+            <div class="tableCell data">
+                <input type="text" list="floraResources" data-dest="element_secondary" 
+                name="Element_Secondary" id="element_secondary_input">
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <h3>OUTPUTS:</h3>
+    <div id="output" class="column is-full-mobile">
+        <div class="wikiText" id="fullArticle">
+            <div>{{Flora infobox</div>
+            <div>| biome = <output id='biome'></output></div>
+            <div>| age = <output id='age'></output></div>
+            <div>| roots = <output id='roots'></output></div>
+            <div>| nut_source = <output id='nut_source'></output></div>
+            <div>| notes = <output id='notes'></output></div>
+            <div>| element_primary = <output id='element_primary' name='element_primary'></output></div>
+            <div>| element_secondary = <output id='element_secondary'></output></div>
+            }}</div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/tesseract.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
